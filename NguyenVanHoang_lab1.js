@@ -80,3 +80,52 @@
   console.log("The bill was", bill[2], "The tip was", tip(bill[2]), "The total value", bill[2] + tip(bill[2]));
 
   //challenge 5
+  function calcAverage(a,b,c){
+    return (a+b+c)/3;
+  }
+  let calcAVR_Scores_Dolphins = calcAverage(44,23,71);
+  let calcAVR_Scores_Koalas = calcAverage(65,54,49);
+  let calcAVR_Scores_Dolphins2 = calcAverage(85,54,41);
+  let calcAVR_Scores_Koalas2 = calcAverage(23,34,27);
+
+  
+  function checkWinner(a,b){
+    if(a>=b*2)
+        console.log("Dolphins thắng(",a," vs ",b,")");
+    else if(b>=a*2)
+        console.log("Koalas thắng(",a," vs ",b,")");
+    else
+        console.log("no team win(",a," vs ",b,")");
+    return;
+  }
+  checkWinner(calcAVR_Scores_Dolphins,calcAVR_Scores_Koalas);
+  checkWinner(calcAVR_Scores_Dolphins2,calcAVR_Scores_Koalas2);
+
+ // challenge 8
+ let ar_bill = [22,295,176,440,37,105,10,1100,86,52];
+ let ar_tip_c8 = [];
+ let ar_total_c8 = [];
+ let i;
+ let n = ar_bill.length;
+ for(i=0;i<n;i++){
+    ar_tip_c8[i] = tip(ar_bill[i]);
+    ar_tip_c8.push(tip(ar_bill[i]));
+    ar_total_c8.push(ar_tip_c8[i] + ar_bill[i]);
+ }
+ console.log(ar_tip_c8);
+ console.log(ar_total_c8);
+
+ // challenge 9
+ function printForecast(a){
+    let n = a.length;
+    let i;
+    for(i=0;i<n;i++){
+        console.log(a[i],"trong ",i+1,"days...");
+    }
+    return;
+ }
+ let testF=[17,21,23];
+ let testF2=[12,5,-5,0,4];
+ printForecast(testF);
+ printForecast(testF2);
+
